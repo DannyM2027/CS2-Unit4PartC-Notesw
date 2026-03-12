@@ -69,11 +69,26 @@ public class Main {
       for (int r = 0; r < seatingChart.length; r++) {
          for (int c = 0; c < seatingChart[0].length; c++){
             // can modift in standard
-            seatingChart[r][c] = seatingChart[r][c] + "fourteen";
+            seatingChart[r][c] += seatingChart[r][c] + "fourteen";
             System.out.print(seatingChart[r][c]);
          }
          System.out.println();
       }
+
+
+      // call the two methds defined outside the main
+
+      int{}{} matrix = { {1 , 2, 3, } , {10,14,15}};
+      System.out.println(getRowTotal(0,matrix));
+      System.out.println(getRowTotal(1,matrix));
+      public static int getRowTotal(int row, int[][] array ) {
+         int sum = 0;
+         for ( int currentCol : array[row] ) {
+            sum += currentCol;
+         }
+         return sum;
+      }
+
 
 
 
